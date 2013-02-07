@@ -325,8 +325,8 @@ status_t BufferQueue::dequeueBuffer(int *outBuf, sp<Fence>& outFence,
             // clients are not allowed to dequeue more than one buffer
             // if they didn't set a buffer count.
             if (!mOverrideMaxBufferCount && dequeuedCount) {
-                ST_LOGE("dequeueBuffer: can't dequeue multiple buffers without "
-                        "setting the buffer count");
+               // ST_LOGE("dequeueBuffer: can't dequeue multiple buffers without "
+                //        "setting the buffer count");
                 return -EINVAL;
             }
 
